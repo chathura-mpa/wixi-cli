@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  min-width: 120px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+  border: 1px solid #e7f0ff;
+  border-radius: 8px;
+}
+
+.medium-plus {
+  font-size: 24px !important;
+  line-height: normal !important;
+}
+
+.large-font {
+  font-size: 36px !important;
+  line-height: normal !important;
+}
+
+.indicator-up {
+  color: #229954 !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+
+.indicator-down {
+  color: #d0180b !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}

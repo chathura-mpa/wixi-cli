@@ -1,0 +1,23 @@
+.pressable {
+  width: 30px; /* Set width of the button */
+  height: 30px; /* Set height of the button (same as width for circle) */
+  border-radius: 50%; /* Makes the button circular */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  background-color: transparent; /* Button background color (example) */
+  border: none; /* Optional: Remove border */
+  cursor: pointer; /* Add a pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  color: #005bb5;
+}
+
+.pressable:hover {
+  color: #005bb5;
+  background-color: #e7f0ff; /* Darker background on hover */
+}
+
+.pressable img {
+  width: 20px; /* Set the icon size */
+  height: 20px; /* Set the icon size */
+}

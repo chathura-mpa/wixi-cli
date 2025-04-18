@@ -1,0 +1,46 @@
+.imageList {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.overlapImage {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  &:not(:first-child) {
+    margin-left: -12px;
+  }
+}
+
+.numberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  margin-left: 4px;
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+}
+
+.extraCount {
+  width: 36px;
+  height: 36px;
+  background-color: #F5F5F5;
+  color: #757575;
+}

@@ -8,19 +8,14 @@ export async function copyFilteredTemplate(templatePath: string, destinationPath
     const srcPath = path.join(templatePath, entry);
     const destPath = path.join(destinationPath, entry);
 
-    if (
-      entry === 'dashboard' &&
-      (await fs.pathExists(path.join(srcPath, 'pages')))
-    ) {
+    if (entry === 'dashboard' && (await fs.pathExists(path.join(srcPath, 'pages')))) {
       const subEntries = await fs.readdir(srcPath);
       for (const sub of subEntries) {
-        if (sub !== 'pages') {
-          const subSrc = path.join(srcPath, sub);
-          const subDest = path.join(destPath, sub);
-          await fs.copy(subSrc, subDest);
-        }
+        const subSrc = path.join(srcPath, sub);
+        const subDest = path.join(destPath, sub);
+        await fs.copy(subSrc, subDest);
       }
-    } else if (!(entry === 'dashboard')) {
+    } else {
       await fs.copy(srcPath, destPath);
     }
   }

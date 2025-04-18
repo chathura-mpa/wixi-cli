@@ -8,8 +8,10 @@
   },
   "scripts": {
     "build": "tsc",
+    "copy-template": "node scripts/copy-template.js",
+    "postbuild": "npm run copy-template && chmod +x dist/index.js",
     "start": "ts-node src/index.ts",
-    "lint": "echo \"Add ESLint if needed\""
+    "clear": "npm unlink -g && npm run build && npm link"
   },
   "keywords": [
     "cli",
@@ -21,10 +23,15 @@
   "author": "Chathura Dev",
   "license": "MIT",
   "dependencies": {
-    "commander": "^11.0.0",
-    "fs-extra": "^11.1.1"
+    "archiver": "^7.0.1",
+    "axios": "^1.8.4",
+    "chalk": "^5.4.1",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.3.0",
+    "openapi3-ts": "^4.4.0"
   },
   "devDependencies": {
+    "@types/archiver": "^6.0.3",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.10.0",
     "ts-node": "^10.9.1",
