@@ -4,9 +4,7 @@ import { echo } from './logger'
 import { store } from '../store'
 import { setFullLoader } from '../store/slices/loaderSlice'
 
-interface RequestOptions extends AxiosRequestConfig {
-  secured?: boolean
-}
+interface RequestOptions extends AxiosRequestConfig { }
 
 interface ApiClientResponse<T = Record<string, unknown>> {
   code: number
